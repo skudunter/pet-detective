@@ -1,0 +1,4 @@
+const WIDTH = 1200;
+const HEIGHT = 800;
+const TILEWIDTH = WIDTH/20;
+const TILEHEIGHT = HEIGHT/20;

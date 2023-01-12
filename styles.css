@@ -1,3 +1,8 @@
 body{
     background-color: rgb(33, 33, 36);
 }
+#canvas-container{
+    display: grid;
+    height: 98vh;
+    place-items: center;
+}
