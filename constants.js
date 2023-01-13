@@ -1,4 +1,4 @@
-const WIDTH = 1200;
+const WIDTH = 1400;
 const HEIGHT = 800;
 const TILEWIDTH = WIDTH/20;
 const TILEHEIGHT = HEIGHT/20;

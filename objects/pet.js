@@ -3,4 +3,8 @@ class Pet {
         this.type = 'pet';
         this.id = id; //for pairing each pet to their corresponding house
     }
+    renderPetButton() {
+        let button = createButton();
+        
+    }
 }
