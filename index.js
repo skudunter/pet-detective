@@ -1,4 +1,4 @@
-let car;
+let car,gameTiles,mapTiles;
 function preload() {
   roadHorizontal = loadImage('./assets/road-horizontal.png');
   roadVertical = loadImage('./assets/road-vertical.png');
@@ -13,7 +13,7 @@ function preload() {
   roadHorizontalDown = loadImage("./assets/road-horizontal-down.jpg");
 }
 function setup() {
-  let mapTiles = [
+   mapTiles = [
     // 2d array of image data
     [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
     [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
@@ -38,11 +38,13 @@ function setup() {
     [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
 
   ]
+   gameTiles = [[]];
   gameCanvas = createCanvas(WIDTH, HEIGHT);
   gameCanvas.parent('canvas-container');
   background(25, 25, 25);
   drawMap(mapTiles);
- car = new Car(10,8,10);
+  drawGame(gameTiles);
+  car = new Car(10,8,10);
 }
 function draw() {
   car.render();

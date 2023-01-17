@@ -1,9 +1,13 @@
 body{
     background-color: rgb(33, 33, 36);
+    margin: 0;
 }
 #canvas-container{
     display: grid;
     height: 98vh;
     place-items: center;
     height:auto;
+}
+button{
+ opacity: 0;   
 }

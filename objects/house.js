@@ -1,13 +1,23 @@
-class House {
-    constructor(gridX,gridY,houseID) {
+class Pet {
+    constructor(gridX, gridY,type) {
         this.gridX = gridX;
         this.gridY = gridY;
-        this.type = 'house';
-        this.id = id;
-        this.imageData = HOUSES[houseID];
-    }
-    render() {
-        image(this.imageData,this.gridX * TILEWIDTH, this.gridY * TILEHEIGHT);
+        this.type = type;
+        this.gas = gas;
+        this.x = this.gridX * TILEWIDTH - 10; //placeholder values
+        this.y = this.gridY * TILEHEIGHT + 6; //placeholder values
+        this.w = TILEWIDTH * 1.2; //placeholder values
+        this.h = TILEHEIGHT * 0.8; //placeholder values
+        this.img = houses[type];
+        this.button = createButton('click me');
+        this.button.size(this.w,this.h);
+        this.button.mousePressed(this.handleMouseClick);
+      }
+      render() {
+        image(this.img, this.x, this.y,this.w,this.h);
+        this.button.position(this.x+(window.innerWidth-width)/2,this.y);//hard coded valuess
+      }
+      handleMouseClick(){
+        console.log('Hello world type:${this.type}');
       }
 }
-//todo: paralelle arrays
